@@ -29,6 +29,7 @@ RUN rm -rf *
 # Copy anything we need in
 COPY nginx.conf /etc/nginx/
 COPY entrypoint.sh /root/
+RUN chmod +x entrypoint.sh
 
 CMD [ "./entrypoint.sh" ]
 EXPOSE 80 1935
